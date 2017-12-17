@@ -70,7 +70,7 @@ class Sm2ShimHooks {
     public static function renderLegacySoundManager2Button(
         $input, array $args, Parser $parser, PPFrame $frame) {
         // Render player using light mode
-        return self::renderPlayer($input, $args, $parser, true);
+        return self::renderPlayer($parser->recursiveTagParse($input, $frame), $args, $parser, true);
     }
 
     /**
